@@ -1,0 +1,22 @@
+.post-container{
+    position: absolute;
+    top: 300px;
+    right: 1400px;
+    padding: 75px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: white;
+}
+
+.post-button{
+    margin-top: 10px;
+}
+
+.input-area{
+    position: relative;
+    width:252px;
+    height: 200px;
+    right:50px;
+    text-align: left;
+    
+}

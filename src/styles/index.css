@@ -1,0 +1,117 @@
+
+#blossom_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; 
+  pointer-events: none;
+}
+
+
+.petal {
+  position: absolute;
+  z-index: 3; 
+  pointer-events: none;
+}
+
+
+.petal-style1 {
+  width: 45px;
+  height: 20px;
+  background: url(http://talktofill.surge.sh/cherry-blossom.png) no-repeat -31px 0;
+}
+
+.petal-style2 {
+  width: 42px;
+  height: 22px;
+  background: url(http://talktofill.surge.sh/cherry-blossom.png) no-repeat 0 -23px;
+}
+
+.petal-style3 {
+  width: 37px;
+  height: 24px;
+  background: url(http://talktofill.surge.sh/cherry-blossom.png) no-repeat 0 -50px;
+}
+
+.petal-style4 {
+  width: 26px;
+  height: 34px;
+  background: url(http://talktofill.surge.sh/cherry-blossom.png) no-repeat -49px -35px;
+}
+
+
+.app {
+  position: relative; 
+  z-index: 1; 
+  background-image: url('ANIME.jpg');
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.header {
+  border-bottom: 1px solid #ddd;
+  background-image: url('Header.png');
+  background-size:auto;
+  color: black;
+}
+
+.sidebar {
+  width: 120px;
+  margin: 5px;
+  position: sticky;
+  top: 62px;
+  align-self: flex-start;
+  align-items: start;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar a {
+  color: rgb(24, 18, 18)
+}
+
+.sidebar a:hover {
+  background-color: #eee;
+}
+
+.sidebar a:visited {
+  color: #444;
+}
+
+.sidebar .nav-item .active {
+  background-color: #def;
+}
+
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.AnimeContainer {
+  position: absolute;
+    top: 300px;
+    right: 800px;
+    background-image: url(BG.jpg);
+    background-size:255px;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    height: 405px;
+    overflow-wrap: break-word;
+}
+
+.center-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

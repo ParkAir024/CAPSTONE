@@ -1,0 +1,15 @@
+.posts-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgba(252, 251, 251, 0.8);
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  position: relative;
+  background-image: url('BG2.png');
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
