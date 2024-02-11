@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom'
 // import Body from '../components/Body'
 
 import Spinner from 'react-bootstrap/Spinner'
+import { Container } from 'react-bootstrap'
+import '../styles/goku-page.css'
+import '../styles/index.css'
 
 export default function UserPage() {
 
@@ -23,12 +26,24 @@ export default function UserPage() {
         })()
     }, [])
 
-    if (!user) return <Spinner />
+    if (!user) return <Spinner animation="border" variant="primary" />
+
+    if (username == 'goku') {
+        return (
+            <div>
+                <Container className='goku-page text'>
+                    <h1>Welcome back Goku!</h1>
+
+
+                </Container>
+            </div>
+        );
+    }
 
     return (
         <>
             <h2>{user.username}</h2>
-            {user.posts.map((post) => {
+            {user.posts && user.posts.map((post) => {
                 return <p key={post.id}>{post.body} <small>{post.timestamp}</small> </p>
             })}
         </>

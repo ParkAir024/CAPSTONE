@@ -11,15 +11,19 @@ export default function Sidebar() {
 
   return (
     <Navbar sticky='top' className='flex-column sidebar'>
+      <>
         <Nav.Item>
             <Nav.Link as={ NavLink } to='/posts'>Feed</Nav.Link>
         </Nav.Item>
+        <br />
         <Nav.Item>
             <Nav.Link as={ NavLink } to={'/user/'.concat(user.username)}>My Page</Nav.Link>
         </Nav.Item>
+        <br />
         <Nav.Item>
             <Nav.Link as={ NavLink } to='/'>Anime Journey</Nav.Link>
         </Nav.Item>
+        </>
     </Navbar>
   )
 }

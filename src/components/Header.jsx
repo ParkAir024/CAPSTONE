@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <Navbar className="bg-body-tertiary mb-3" sticky='top'>
-            <Container className='header'>
+            <Container className='header text'>
                 <Navbar.Brand as={NavLink} to="/" style={{color: 'black'}}>Anime List!!</Navbar.Brand>
                 <Nav.Link as={NavLink} to='/users'>Users</Nav.Link>
                 <Nav.Link as={NavLink} to='/posts'>Anime</Nav.Link>

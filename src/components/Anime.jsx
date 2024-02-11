@@ -27,11 +27,17 @@ export default function Anime() {
     
     
     function randomAnime() {
-        const randomIndex = Math.floor(Math.random() * animes.length);
-        const newAnime = animes[randomIndex];
+        const availableAnimes = animes.filter(anime => !selectedAnimes.includes(animes));
+        if (availableAnimes.length > 0){
+            const randomIndex = Math.floor(Math.random()* availableAnimes.length);
+            const newAnime = availableAnimes[randomIndex]
+        
 
         setNextAnime(newAnime);
+    } else{
+        setNextAnime('No more animes!')
     }
+}
 
     function addSelectedAnime() {
         if (nextAnime) {
