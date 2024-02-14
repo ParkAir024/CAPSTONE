@@ -83,9 +83,9 @@ export default function Login() {
         <div className="login-container">
             <h3>Login</h3>
             <form action="" id='login-form' onSubmit={handleSubmit}>
-                <label htmlFor="username"></label><br />
+                <label htmlFor="username">Username</label><br />
                 <input type="text" name='username' /><br />
-                <label htmlFor="password"></label><br />
+                <label htmlFor="password">Password</label><br />
                 <input type="password" name={'password'} /><br />
                 <input type="submit" value={'Login'} className="Button" />
             </form>

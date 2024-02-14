@@ -10,10 +10,10 @@ export default function Sidebar() {
   const { user } = useContext(UserContext)
 
   return (
-    <Navbar sticky='top' className='flex-column sidebar'>
+    <Navbar sticky='top' className='flex-column sidebar'style ={{zIndex: 1}} >
       <>
         <Nav.Item>
-            <Nav.Link as={ NavLink } to='/posts'>Feed</Nav.Link>
+            <Nav.Link as={ NavLink } to='/'>Home</Nav.Link>
         </Nav.Item>
         <br />
         <Nav.Item>
@@ -21,7 +21,15 @@ export default function Sidebar() {
         </Nav.Item>
         <br />
         <Nav.Item>
-            <Nav.Link as={ NavLink } to='/'>Anime Journey</Nav.Link>
+            <Nav.Link as={ NavLink } to='/posts'>Feed</Nav.Link>
+        </Nav.Item>
+        <br />
+        <Nav.Item>
+            <Nav.Link as={ NavLink } to='/trivia'>Trivia</Nav.Link>
+        </Nav.Item>
+        <br />
+        <Nav.Item>
+            <Nav.Link as={ NavLink } to='/lists'>Lists</Nav.Link>
         </Nav.Item>
         </>
     </Navbar>

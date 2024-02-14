@@ -13,3 +13,10 @@
   background-position: bottom right;
   background-repeat: no-repeat;
 }
+
+.users-container input[type="text"] {
+  width: 200px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}

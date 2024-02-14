@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Container from "react-bootstrap/esm/Container";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
@@ -18,6 +18,7 @@ import { ToastContainer } from "react-toastify";
 import Logout from "./components/Logout";
 import TriviaPage from "./pages/TriviaPage";
 import './styles/index.css';
+import WatchList from "./pages/WatchList";
 
 // import useUserContext from "./useUserContext";
 
@@ -32,21 +33,26 @@ export default function App() {
     className += " trivia-page ";
   }
 
+
+
   const [showModal, setShowModal] = useState(true);
 
+  useEffect(() => {
+    setShowModal(currentPath === "/");
+  }, [currentPath]);
 
   const handleCloseModal = () => setShowModal(false);
 
   return (
     <Container fluid data-bs-theme='dark' className={className}>
-      <Modal show={showModal} onHide={handleCloseModal} dialogClassName="custom-modal modal-fullscreen">
+      <Modal show={showModal} onHide={handleCloseModal} dialogClassName="custom-modal modal-fullscreen text">
         <Modal.Header closeButton className="d-flex justify-content-center align-items-center" style={{ fontSize: "5rem" }}>
-          <Modal.Title className="text-center flex-grow-1" style={{ fontSize: "5rem" }} >Welcome to Anime List Share!</Modal.Title>
+          <Modal.Title className="text-center flex-grow-1" style={{ fontSize: "5rem" }} >Welcome to Ani-List!</Modal.Title>
         </Modal.Header>
         <Modal.Body className="text-center" style={{ fontSize: "3.5rem" }}>
-          A site to share and rate your anime lists! Could be your watch list, or your top anime lists! Let others rate and recommend there favorites!
+          A social site to share, post, and rate your anime lists! Could be your watch list, your top anime lists, or maybe just make new friends! Come on in and have fun!
         </Modal.Body>
-        <Modal.Footer className="d-flex justify-content-center"> 
+        <Modal.Footer className="d-flex justify-content-center">
           <Button variant="success" onClick={handleCloseModal} style={{ fontSize: "4rem" }}>
             Enter
           </Button>
@@ -60,6 +66,9 @@ export default function App() {
         <Route path='/login' element={<FormPage>
           <Login />
         </FormPage>} />
+        <Route path='/lists' element={<WatchList>
+
+        </WatchList>} />
         <Route path='/trivia' element={<TriviaPage>
 
         </TriviaPage>} />
@@ -73,7 +82,7 @@ export default function App() {
           <Posts />
         </SocialPage>} />
         <Route path='/user/:username' element={<UserPage />} />
-        <Route path='logout' element={<Logout />} />
+        <Route path='/logout' element={<Logout />} />
       </Routes>
       <ToastContainer />
     </Container>

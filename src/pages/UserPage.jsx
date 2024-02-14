@@ -28,14 +28,57 @@ export default function UserPage() {
 
     if (!user) return <Spinner animation="border" variant="primary" />
 
-    if (username == 'goku') {
+    if (username === 'goku') {
         return (
-            <div>
-                <Container className='goku-page text'>
-                    <h1>Welcome back Goku!</h1>
+            <div className="grid-container">
+                <Container className="goku-page-container text">
+                    <div className="goku-content">
+                        <h1><p class="card-text text-start">Welcome back Goku! </p></h1>
+                        <div className="info">
+                            <br />
+                            <div className="profile-pic" />
+                            <br />
+                            <div>
+                                <p className="card-text text-start">Goku<span className="membership-year">Age:43</span></p>
+                            </div>
+                            <br />
+                            <div>
+                                <p className="card-text text-start">Member since: <span className="membership-year">1984</span></p></div>
+                            <br />
+                            <div>
+                                <p className="card-text text-start">Interests:</p>
+                                <p className="membership-year">Fighting, Training, Eating</p>
+                            </div>
+                            <br />
 
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
 
+                        </div>
+                    </div>
                 </Container>
+                <Container className='misc-content text'>
+                    <div>
+                        <h2><p className="card-text text-center">Recent Activity</p></h2>
+                    </div>
+                    <div>
+                        <div className='new-photo'>
+                        <p>Uploaded new photo</p>
+                        </div>
+                    </div>
+                </Container >
             </div>
         );
     }

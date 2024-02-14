@@ -1,9 +1,9 @@
 .post-container{
     position: absolute;
-    top: 300px;
-    right: 10px;
+    top: 320px;
+    right: 1275px;
     padding: 75px;
-    width: 300px;
+    width: 210px;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: white;
 }
@@ -14,7 +14,7 @@
 
 .input-area{
     position: relative;
-    width:252px;
+    width:150px;
     height: 200px;
     right:50px;
     text-align: left;
