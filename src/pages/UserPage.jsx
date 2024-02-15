@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom'
 // import Body from '../components/Body'
 
 import Spinner from 'react-bootstrap/Spinner'
-import { Container } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import '../styles/goku-page.css'
 import '../styles/index.css'
 
@@ -30,56 +32,46 @@ export default function UserPage() {
 
     if (username === 'goku') {
         return (
-            <div className="grid-container">
-                <Container className="goku-page-container text">
-                    <div className="goku-content">
-                        <h1><p class="card-text text-start">Welcome back Goku! </p></h1>
-                        <div className="info">
+            <>
+                <h1 className="card-text text-center text">Welcome back Goku!</h1>
+                <Container className='text goku-page-container'>
+                    <Row className='info'>
+                        <Col className='profile-pic' />
+                        <Col>
+                            <p className="card-text text-start">Goku<span className="membership-year">Age:43</span></p>
+                            <p className="card-text text-start">Member since: <span className="membership-year">1984</span></p>
+                            <p className="card-text text-start">Interests:</p>
+                            <p className="membership-year">Fighting, Training, Eating</p>
                             <br />
-                            <div className="profile-pic" />
-                            <br />
-                            <div>
-                                <p className="card-text text-start">Goku<span className="membership-year">Age:43</span></p>
-                            </div>
-                            <br />
-                            <div>
-                                <p className="card-text text-start">Member since: <span className="membership-year">1984</span></p></div>
-                            <br />
-                            <div>
-                                <p className="card-text text-start">Interests:</p>
-                                <p className="membership-year">Fighting, Training, Eating</p>
-                            </div>
-                            <br />
+                            <p className="card-text text-start">Rival/Best Buddy:</p>
+                            <p className="membership-year">Vegeta</p>
 
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-
-                        </div>
-                    </div>
-                </Container>
-                <Container className='misc-content text'>
-                    <div>
-                        <h2><p className="card-text text-center">Recent Activity</p></h2>
-                    </div>
-                    <div>
-                        <div className='new-photo'>
-                        <p>Uploaded new photo</p>
-                        </div>
-                    </div>
-                </Container >
-            </div>
+                        </Col>
+                    </Row>
+                    <h2 className="card-text text-center">Recent Activity</h2>
+                    <Row className='misc-content text'>
+                        <Col className='new-photo'>
+                        </Col>
+                        <Col className='friend-pic'></Col>
+                        <Col className='friend-pic'></Col>
+                    </Row>
+                    <Row className='misc-content text'>
+                        <Col>Uploaded new photo</Col>
+                        <Col>Became friends with AllMightJR</Col>
+                        <Col>Became friends with Vegeta</Col>
+                    </Row>
+                    <Row className='misc-content text'>
+                        <Col className='like-pic'></Col>
+                        <Col className='new-photo2'>
+                        </Col>
+                        <Col className='friend-pic'></Col>
+                    </Row>
+                    <Row className='misc-content text'>
+                        <Col>Vegeta Liked your post</Col>
+                        <Col>Uploaded new photo</Col>
+                        <Col>Became friends with TanjiroK</Col>
+                    </Row>
+                </Container></>
         );
     }
 

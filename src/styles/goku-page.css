@@ -4,18 +4,17 @@
     font-family: 'Manga Temple', sans-serif;
 }
 
-
-.goku-page {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.goku-content{
+    position: flex;
+    right: 100px;
 }
 
+
 .info {
-    width: 55%;
+    width: 60%;
+    position: relative;
     background-color: black;
+    left: 20%;
 }
 
 .profile-pic {
@@ -33,31 +32,36 @@
 
 
 .misc-content {
-    position: absolute;
-    top: 129px;
-    right: 10px; 
     background-color: black;
-    width: 200px;
-    display: grid;
-    grid-template-columns: 2fr; /* Adjust the number of columns as needed */
-    grid-template-rows: auto; /* Adjust rows as needed */
-    gap: 20px; /* Adjust the gap between items */
+    gap: 300px;
 }
 
-
+.new-photo2 {
+    background-image: url('goku2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    border: 10px solid red;
+}
 
 .new-photo {
     background-image: url('goku-BG.jpg');
     background-size: contain;
     background-repeat: no-repeat;
+    height: 183px;
+    border: 10px solid red;
+}
+
+.friend-pic{
+    background-image: url('fist.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 200px;
 }
 
-.grid-container {
-    display: grid;
-    grid-template:
-        "a a a" 50px
-        "b c c" 50px
-        "b c c" 50px / 1fr 1fr 1fr;
+.like-pic {
+    background-image: url('thumbsup.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 175px;
 }
-

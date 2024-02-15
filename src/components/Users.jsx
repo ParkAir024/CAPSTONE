@@ -23,7 +23,7 @@ export default function Users() {
             } catch (error) {
                 console.error('Error fetching users:', error);
             } finally {
-                setLoading(false); // Set loading to false when data fetching is complete
+                setLoading(false);
             }
         })();
     }, []);
@@ -84,6 +84,7 @@ export default function Users() {
 
     return (
         <div className="users-container">
+            <div className="flair2"/>
             <input
                 type="text"
                 placeholder="Search users..."
